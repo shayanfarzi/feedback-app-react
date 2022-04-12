@@ -1,4 +1,3 @@
-import "./App.css";
 import FeedbackData from "./data/FeedbackData";
 import Header from "./components/Header";
 import { useEffect, useState } from "react";
@@ -14,7 +13,7 @@ function App() {
     <>
       <Header text='Feedback App'></Header>
       <div className='container'>
-        <RatingSelect select={7} selected={8}></RatingSelect>
+        <RatingSelect className='card' select={7} selected={8}></RatingSelect>
       </div>
       <div className='container'>
         <FeedbackList feedbacks={feedback} />
