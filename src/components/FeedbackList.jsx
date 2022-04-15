@@ -1,11 +1,13 @@
 import FeedbackItem from "./FeedbackItem";
-function FeedbackList({ feedbacks }) {
-  return feedbacks.map((feedback) => {
+function FeedbackList({ feedbacks, handleDelete }) {
+  return feedbacks.map(({ text, id, rating }) => {
     return (
       <FeedbackItem
-        text={feedback.text}
-        key={feedback.id}
-        rating={feedback.rating}
+        text={text}
+        key={id}
+        id={id}
+        rating={rating}
+        handleDelete={handleDelete}
       />
     );
   });

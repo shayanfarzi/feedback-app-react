@@ -9,6 +9,10 @@ function App() {
   useEffect(() => {
     setFeedback(FeedbackData);
   }, []);
+  const deleteFeedback = (id) => {
+    const filtered = feedback.filter((item) => item.id !== id);
+    setFeedback(filtered);
+  };
   return (
     <>
       <Header text='Feedback App'></Header>
@@ -16,7 +20,7 @@ function App() {
         <RatingSelect className='card' select={7} selected={8}></RatingSelect>
       </div>
       <div className='container'>
-        <FeedbackList feedbacks={feedback} />
+        <FeedbackList feedbacks={feedback} handleDelete={deleteFeedback} />
       </div>
     </>
   );
