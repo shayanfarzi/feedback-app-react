@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 function FeedbackStats({ feedback }) {
   let average =
     feedback.reduce((acc, cur) => {
