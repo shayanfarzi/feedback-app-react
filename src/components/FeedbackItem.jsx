@@ -6,7 +6,7 @@ function FeedbackItem({ text, rating, id, handleDelete }) {
   // const [rating, setRating] = useState(7);
   // const [text, setText] = useState("this is feedback");
   return (
-    <Card reverse={true}>
+    <Card reverse={false}>
       <div className='num-display'>{rating}</div>
       <button onClick={() => handleDelete(id)} className='close'>
         <FaTimes color='purple' />
