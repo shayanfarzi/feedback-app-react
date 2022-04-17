@@ -2,6 +2,7 @@ import FeedbackItem from "./FeedbackItem";
 import { motion, AnimatePresence } from "framer-motion";
 
 function FeedbackList({ feedbacks, handleDelete }) {
+  //list
   return (
     <div className='feedback-list'>
       <AnimatePresence>
