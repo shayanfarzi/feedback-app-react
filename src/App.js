@@ -8,6 +8,8 @@ import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import About from "./pages/About.page";
 
+import { FeedbackProvider } from "./context/FeedbackContext";
+
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
   useEffect(() => {
@@ -22,7 +24,7 @@ function App() {
     setFeedback([newFeedback, ...feedback]);
   };
   return (
-    <>
+    <FeedbackProvider>
       <Router>
         <Header text='Feedback App'></Header>
 
@@ -46,7 +48,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-    </>
+    </FeedbackProvider>
   );
 }
 
