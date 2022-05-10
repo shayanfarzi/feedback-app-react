@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import { delData, postData, updateData } from "../utils/request";
 const FeedbackContext = createContext();
 const BASE_URL = "http://localhost:5000/feedback";
@@ -32,7 +31,7 @@ export const FeedbackProvider = ({ children }) => {
   };
 
   const updateFeedback = async (id, updItem) => {
-    const data = await updateData(`${BASE_URL}/${id}`, updItem);
+    await updateData(`${BASE_URL}/${id}`, updItem);
     // setFeedback(
     //   feedback.map((item) => (item.id === id ? { ...item, ...updItem } : item))
     // );

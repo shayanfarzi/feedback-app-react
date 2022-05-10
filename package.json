@@ -9,6 +9,7 @@
     "concurrently": "^7.1.0",
     "framer-motion": "^6.3.0",
     "json-server": "^0.17.0",
+    "prop-types": "^15.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.3.1",
@@ -23,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server --watch db.json --port 5000",
-    "dev": "concurrently \"yarn server\" \"yarn start\""
+    "dev": "concurrently \"pnpm run server\" \"pnpm run start\""
   },
   "eslintConfig": {
     "extends": [
